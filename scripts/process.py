@@ -42,3 +42,5 @@ class Process:
 
         return HtmlFile
 
+    def clean(self):
+        open('data/connections.csv', 'w').close()

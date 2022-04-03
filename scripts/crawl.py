@@ -1,3 +1,4 @@
+import os
 import re
 import time
 import requests
@@ -10,11 +11,11 @@ class Crawl:
         pass
 
     def crawl(self, search_history, target):
-
-        df = pd.read_csv('data/connections.csv')
-        if search_history[-1].split('/')[-1] in df.From.values:
-            print('Record Already Exists')
-            return False
+        if not os.stat('data/connections.csv').st_size == 0:
+            df = pd.read_csv('data/connections.csv')
+            if search_history[-1].split('/')[-1] in df.From.values:
+                print('Record Already Exists')
+                return False
         # Checking if the latest url matches the target url
         elif search_history[-1] == target:
             print("\nReached Target")

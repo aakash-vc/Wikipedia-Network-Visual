@@ -23,12 +23,6 @@
         
 
         
-        #config {
-            float: left;
-            width: 400px;
-            height: 600px;
-        }
-        
 
         
 </style>
@@ -38,8 +32,6 @@
 <body>
 <div id = "mynetwork"></div>
 
-
-<div id = "config"></div>
 
 <script type="text/javascript">
 
@@ -58,18 +50,15 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"font": {"color": "black"}, "id": "Superman", "label": "Superman", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Superhero", "label": "Superhero", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Batman", "label": "Batman", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Stock character", "label": "Stock character", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Stereotypical", "label": "Stereotypical", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Social psychology", "label": "Social psychology", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Science", "label": "Science", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Scientific method", "label": "Scientific method", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Psychology", "label": "Psychology", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Biology", "label": "Biology", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Empirical evidence", "label": "Empirical evidence", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Proposition", "label": "Proposition", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Logic", "label": "Logic", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Reason", "label": "Reason", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Consciousness", "label": "Consciousness", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Sentience", "label": "Sentience", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Emotion", "label": "Emotion", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Mental state", "label": "Mental state", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Mind", "label": "Mind", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Phenomenon", "label": "Phenomenon", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Philosophy", "label": "Philosophy", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "One Direction", "label": "One Direction", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Pop music", "label": "Pop music", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Popular music", "label": "Popular music", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Music", "label": "Music", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "The arts", "label": "The arts", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Creativity", "label": "Creativity", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Egg", "label": "Egg", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Zygote", "label": "Zygote", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Eukaryote", "label": "Eukaryote", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Organism", "label": "Organism", "shape": "dot", "size": 10}]);
-        edges = new vis.DataSet([{"Weight": NaN, "from": "Superman", "to": "Superhero", "weight": 1}, {"Weight": NaN, "from": "Superhero", "to": "Batman", "weight": 1}, {"Weight": NaN, "from": "Superhero", "to": "Stock character", "weight": 1}, {"Weight": NaN, "from": "Stock character", "to": "Stereotypical", "weight": 1}, {"Weight": NaN, "from": "Stereotypical", "to": "Social psychology", "weight": 1}, {"Weight": NaN, "from": "Social psychology", "to": "Science", "weight": 1}, {"Weight": NaN, "from": "Science", "to": "Scientific method", "weight": 1}, {"Weight": NaN, "from": "Science", "to": "Psychology", "weight": 1}, {"Weight": 1.0, "from": "Science", "to": "Biology", "weight": 1}, {"Weight": NaN, "from": "Scientific method", "to": "Empirical evidence", "weight": 1}, {"Weight": NaN, "from": "Empirical evidence", "to": "Proposition", "weight": 1}, {"Weight": NaN, "from": "Proposition", "to": "Logic", "weight": 1}, {"Weight": NaN, "from": "Logic", "to": "Reason", "weight": 1}, {"Weight": NaN, "from": "Reason", "to": "Consciousness", "weight": 1}, {"Weight": NaN, "from": "Consciousness", "to": "Sentience", "weight": 1}, {"Weight": NaN, "from": "Sentience", "to": "Emotion", "weight": 1}, {"Weight": NaN, "from": "Emotion", "to": "Mental state", "weight": 1}, {"Weight": NaN, "from": "Mental state", "to": "Mind", "weight": 1}, {"Weight": NaN, "from": "Mind", "to": "Phenomenon", "weight": 1}, {"Weight": NaN, "from": "Phenomenon", "to": "Philosophy", "weight": 1}, {"Weight": NaN, "from": "One Direction", "to": "Pop music", "weight": 1}, {"Weight": NaN, "from": "Pop music", "to": "Popular music", "weight": 1}, {"Weight": NaN, "from": "Popular music", "to": "Music", "weight": 1}, {"Weight": NaN, "from": "Music", "to": "The arts", "weight": 1}, {"Weight": NaN, "from": "The arts", "to": "Creativity", "weight": 1}, {"Weight": NaN, "from": "Creativity", "to": "Psychology", "weight": 1}, {"Weight": 1.0, "from": "Egg", "to": "Zygote", "weight": 1}, {"Weight": 1.0, "from": "Zygote", "to": "Eukaryote", "weight": 1}, {"Weight": 1.0, "from": "Eukaryote", "to": "Organism", "weight": 1}, {"Weight": 1.0, "from": "Organism", "to": "Biology", "weight": 1}]);
+        nodes = new vis.DataSet([{"font": {"color": "black"}, "id": "Batman", "label": "Batman", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Superhero", "label": "Superhero", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Stock character", "label": "Stock character", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Stereotypical", "label": "Stereotypical", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Social psychology", "label": "Social psychology", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Science", "label": "Science", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Scientific method", "label": "Scientific method", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Empirical evidence", "label": "Empirical evidence", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Proposition", "label": "Proposition", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Logic", "label": "Logic", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Reason", "label": "Reason", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Consciousness", "label": "Consciousness", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Sentience", "label": "Sentience", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Emotion", "label": "Emotion", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Mental state", "label": "Mental state", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Mind", "label": "Mind", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Phenomenon", "label": "Phenomenon", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "id": "Philosophy", "label": "Philosophy", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"Weight": 1, "from": "Batman", "to": "Superhero", "weight": 1}, {"Weight": 1, "from": "Superhero", "to": "Stock character", "weight": 1}, {"Weight": 1, "from": "Stock character", "to": "Stereotypical", "weight": 1}, {"Weight": 1, "from": "Stereotypical", "to": "Social psychology", "weight": 1}, {"Weight": 1, "from": "Social psychology", "to": "Science", "weight": 1}, {"Weight": 1, "from": "Science", "to": "Scientific method", "weight": 1}, {"Weight": 1, "from": "Scientific method", "to": "Empirical evidence", "weight": 1}, {"Weight": 1, "from": "Empirical evidence", "to": "Proposition", "weight": 1}, {"Weight": 1, "from": "Proposition", "to": "Logic", "weight": 1}, {"Weight": 1, "from": "Logic", "to": "Reason", "weight": 1}, {"Weight": 1, "from": "Reason", "to": "Consciousness", "weight": 1}, {"Weight": 1, "from": "Consciousness", "to": "Sentience", "weight": 1}, {"Weight": 1, "from": "Sentience", "to": "Emotion", "weight": 1}, {"Weight": 1, "from": "Emotion", "to": "Mental state", "weight": 1}, {"Weight": 1, "from": "Mental state", "to": "Mind", "weight": 1}, {"Weight": 1, "from": "Mind", "to": "Phenomenon", "weight": 1}, {"Weight": 1, "from": "Phenomenon", "to": "Philosophy", "weight": 1}]);
 
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};
 
         var options = {
     "configure": {
-        "enabled": true,
-        "filter": [
-            "physics"
-        ]
+        "enabled": false
     },
     "edges": {
         "color": {
@@ -108,10 +97,6 @@
         
         
 
-        
-        // if this network requires displaying the configure window,
-        // put it in its div
-        options.configure["container"] = document.getElementById("config");
         
 
         network = new vis.Network(container, data, options);

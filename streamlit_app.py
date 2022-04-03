@@ -23,12 +23,12 @@ def display():
             df = Process().merge_dataframes(df)
         df.to_csv('data/connections.csv', index=False)
 
-        #Graph().graph()
         HtmlFile = Process().get_graph(df, physics)
 
         components.html(HtmlFile.read(), height=1200, width=1000)
-        
-        #st.write(df)
+
+    #if st.button('Clear Data'):
+        #Process().clean()
 
 if __name__ == '__main__':
     display()
