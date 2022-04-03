@@ -1,0 +1,31 @@
+From,To,Weight
+Superman,Superhero,
+Batman,Superhero,
+Superhero,Stock character,
+Stock character,Stereotypical,
+Stereotypical,Social psychology,
+Social psychology,Science,
+Science,Scientific method,
+Scientific method,Empirical evidence,
+Empirical evidence,Proposition,
+Proposition,Logic,
+Logic,Reason,
+Reason,Consciousness,
+Consciousness,Sentience,
+Sentience,Emotion,
+Emotion,Mental state,
+Mental state,Mind,
+Mind,Phenomenon,
+Phenomenon,Philosophy,
+One Direction,Pop music,
+Pop music,Popular music,
+Popular music,Music,
+Music,The arts,
+The arts,Creativity,
+Creativity,Psychology,
+Psychology,Science,
+Egg,Zygote,1.0
+Zygote,Eukaryote,1.0
+Eukaryote,Organism,1.0
+Organism,Biology,1.0
+Biology,Science,1.0
