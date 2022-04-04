@@ -45,7 +45,11 @@ class Crawl:
         for i in p_tags[:10]:
             content += str(i)
 
-        content = re.sub("\(.*?\)","()",content)
+        var = re.findall("\(.*?\)", content)
+        for i in var:
+            if '</a>' in i:
+                content = content.replace(i, '')
+
         a_tags = BeautifulSoup(content, 'html.parser').select('a')
 
         for i in range(len(a_tags)):
@@ -62,8 +66,7 @@ class Crawl:
 
             next = a_tags[i].get('href')
             print('next: ', next)
-            break
-        return next
+            return next
 
 
 
