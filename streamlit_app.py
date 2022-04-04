@@ -16,6 +16,7 @@ def display():
             for i in search(query, num=1, stop=1):
                 topic = i
         
+        print(f'URL: {topic}')
         lst = Crawl().input_url(topic)
         df = Process().get_connections(lst)
 

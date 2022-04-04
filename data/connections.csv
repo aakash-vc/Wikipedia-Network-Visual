@@ -1,0 +1,35 @@
+From,To,Weight
+Egg,Zygote,1
+Zygote,Eukaryote,1
+Eukaryote,Organism,1
+Organism,Biology,1
+Biology,Science,1
+Science,Scientific method,1
+Scientific method,Empirical evidence,1
+Empirical evidence,Proposition,1
+Proposition,Logic,1
+Logic,Reason,1
+Reason,Consciousness,1
+Consciousness,Sentience,1
+Sentience,Emotion,1
+Emotion,Mental state,1
+Mental state,Mind,1
+Mind,Phenomenon,1
+Phenomenon,Philosophy,1
+Marketing,Target market,1
+Target market,Business,1
+Business,Product (business),1
+Product (business),Market (economics),1
+Market (economics),System,1
+System,Interaction,1
+Interaction,Causality,1
+Causality,Event (relativity),1
+Event (relativity),Physics,1
+Physics,Natural science,1
+Natural science,Branches of science,1
+Branches of science,Science,1
+Superman,Superhero,1
+Superhero,Stock character,1
+Stock character,Stereotypical,1
+Stereotypical,Social psychology,1
+Social psychology,Science,1

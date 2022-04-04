@@ -12,12 +12,14 @@ class Crawl:
 
     def crawl(self, search_history, target):
         if not os.stat('data/connections.csv').st_size == 0:
+            print('check record')
             df = pd.read_csv('data/connections.csv')
             if search_history[-1].split('/')[-1] in df.From.values:
                 print('Record Already Exists')
                 return False
+            print('No record')
         # Checking if the latest url matches the target url
-        elif search_history[-1] == target:
+        if search_history[-1] == target:
             print("\nReached Target")
             return False
         # Terminating in case the chain is too long
@@ -73,8 +75,10 @@ class Crawl:
     def input_url(self, url):
         target_url = 'https://en.wikipedia.org/wiki/Philosophy'
         search_history = [url]
+        print('check')
 
         while self.crawl(search_history, target_url):
+            print('Checking')
             next = self.get_next(search_history)
             search_history.append('https://en.wikipedia.org'+next)
             time.sleep(1)
